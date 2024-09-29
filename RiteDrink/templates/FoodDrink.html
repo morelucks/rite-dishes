@@ -1,0 +1,239 @@
+{% extends 'drinkfile.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+
+{% block content %}
+<!-- section 1 for standards-->
+
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700);
+ 
+       html {
+         font-family: "Open Sans", sans-serif;
+       }
+ {% comment %}       
+       h1 {
+         color: #444;
+       } {% endcomment %}
+ 
+ 
+ 
+ 
+       .cup .btn {
+         position: absolute;
+         top: 40%;
+         border-radius: 15px;
+ 
+         left: 48%;
+         transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         font-size: 16px;
+         padding: 12px 24px;
+         cursor: pointer;
+         text-align: center;
+       }
+ 
+ 
+       body {
+         font-family: Arial;
+         font-size: 17px;
+       }
+       
+       .food {
+         position: relative;
+         max-width: 100%;
+         margin: 0 auto;
+       }
+       
+       .food img {vertical-align: middle;}
+       
+       .food .note {
+         position: absolute;
+         bottom: 0;
+         background: rgb(0, 0, 0); /* Fallback color */
+         background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+         color: #f1f1f1;
+         width: 100%;
+         padding: 20px;
+       }
+ 
+ 
+ 
+       .blink29 {
+         animation: blinker 6s linear infinite;
+         color: black;
+       }
+       @keyframes blinker {
+         50% {
+           opacity: 0;
+         }
+         
+       }
+ 
+ 
+ 
+       .glow98 {
+         text-shadow: 0 0 5px gold, 0 0 10px gold,
+         0 0 20px gold, 0 0 40px gold;
+       }
+ 
+ 
+ 
+       .glow01 {
+         text-shadow: 0 0 5px darkGreen	, 0 0 10px darkGreen	,
+         0 0 20px darkgreen	, 0 0 40px darkGreen	;
+       }
+ 
+       .navbar-toggler-icon {
+         background-image: none!important;
+         background-color: darkslategrey;
+         height: 3px;
+         width: 25px;
+         margin: 10px 0;
+         position: relative;
+         transition: all 0.35s ease-out;
+         transform-origin: center;
+       }
+       .navbar-toggler-icon::before {
+         display: block;
+         background-color: darkslategrey;
+         height: 3px;
+         content: "";
+         position: relative;
+         top: -7px;
+         transition: all 0.15s ease-out;/*taken down to hide quicker*/
+         transform-origin: center;
+       }
+ 
+       .navbar-toggler-icon::after {
+         display: block;
+         background-color: darkslategrey;
+         height: 3px;
+         content: "";
+         position: relative;
+         top: 4px;
+   }
+ 
+ 
+   .glow9 {
+     text-shadow: 0 0 5px gold, 0 0 10px gold,
+     0 0 20px gold, 0 0 40px gold;
+   }
+    
+   .glow68 {
+     text-shadow: 0 0 5px white, 0 0 10px white,
+     0 0 20px white, 0 0 40px white;
+   }  
+   
+   
+   .glow98 {
+    text-shadow: 0 0 5px orange, 0 0 10px orange,
+    0 0 20px orange, 0 0 40px orange;
+  }
+ 
+   .glow977 {
+     text-shadow: 0 0 5px white, 0 0 10px white,
+     0 0 20px white, 0 0 40px white;
+   }
+ 
+   .blink9 {
+     animation: blinker 6s linear infinite;
+     color: yellow;
+   }
+   @keyframes blinker {
+     50% {
+       opacity: 0;
+     }
+ 
+   } 
+   
+   
+     .blink90 {
+       animation: blinker 6s linear infinite;
+       color: orange;
+     }
+     @keyframes blinker {
+       50% {
+         opacity: 0;
+       }  
+     }
+ 
+ 
+ 
+  .blink900 {
+       animation: blinker 2s linear infinite;
+     }
+     @keyframes blinker {
+       50% {
+         opacity: 0;
+       }  
+     }
+ 
+ 
+    .blink908 {
+       animation: blinker 3s linear infinite;
+     }
+     @keyframes blinker {
+       50% {
+         opacity: 0;
+       }  
+     }
+ 
+   </style>
+
+
+
+<div style="background-color: teal">
+  <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 36px">Alcholic Drink Categories</h3>
+  <br>
+</div>
+  
+<div class="container-fluid" style="background-color: teal">
+
+<div class="card text-center">
+  <div class=" cup">
+    <img src="https://i.postimg.cc/v8xvgzNG/beer.jpg" width="100%" class="img-fluid " alt="...">
+    <a href="{% url 'Alcholic:FoodDrunk' %}"><button type="button" class="btn btn-warning blink29 " ><span style="color: midnightblue; font-size: 20px; font-weight:900">View</span></button></a>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title glow98" style="color: midnightblue; font-weight:900; text-align: center; font-size: 25px">Alcholic Drinks</h6>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<br>
+</div>
+
+</section>
+
+
+
+
+<section id="best-features" class="text-center">
+
+  <div style="background-color: orange">
+    <h3 class="glow68" style="background-color: orange;font-weight:900; text-align:center; font-size: 40px">Soft Drinks Categories</h3>
+    <br>
+  </div>
+    
+
+</section>
+<div class="container-fluid" style="background-color: teal">
+    
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+{% for rites5 in rite %}
+    <div class="col">
+      <div class="card">
+        <a href="{% url 'RiteDrink:drink_detail' rites5.slug %}"><img  width=200px, height=400px src="{{rites5.image.url}}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title" style="color: indigo; font-weight:900">{{rites5.title}} <span class="card-title" style="color: #2C3539; font-weight:900"> - ₦{{rites5.body2}}</span></h5>
+            <small class="text-muted">🕗 3 mins ago </small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <br>
+</div>
+{%endblock%}
+

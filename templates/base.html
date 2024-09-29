@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RiteDishes The Online Food Vendor </title>
+    <link rel = "icon" href =
+"https://i.postimg.cc/bvdxJpy2/Whats-App-Image-2023-02-26-at-2-38-26-PM.jpg"
+        type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body style="background-color:  #123456">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700);
+
+      html {
+        font-family: "Open Sans", sans-serif;
+      }
+{% comment %}
+      h1 {
+        color: #444;
+      } {% endcomment %}
+
+
+      .pol{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cup .btn {
+        position: absolute;
+        top: 30%;
+        border-radius: 15px;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-size: 16px;
+        padding: 12px 24px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+
+
+
+
+
+
+
+
+{% comment %}        {% endcomment %}
+
+
+
+
+
+
+
+
+
+      body {
+        font-family: Arial;
+        font-size: 17px;
+      }
+
+      .food {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .food img {vertical-align: middle;}
+
+      .food .note {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      }
+
+
+
+      .blink29 {
+        animation: blinker 6s linear infinite;
+        color: black;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+
+      }
+
+
+
+      .glow98 {
+        text-shadow: 0 0 5px gold, 0 0 10px gold,
+        0 0 20px gold, 0 0 40px gold;
+      }
+
+
+
+      .glow01 {
+        text-shadow: 0 0 5px darkGreen	, 0 0 10px darkGreen	,
+        0 0 20px darkgreen	, 0 0 40px darkGreen	;
+      }
+
+      .navbar-toggler-icon {
+        background-image: none!important;
+        background-color: darkslategrey;
+        height: 3px;
+        width: 25px;
+        margin: 10px 0;
+        position: relative;
+        transition: all 0.35s ease-out;
+        transform-origin: center;
+      }
+      .navbar-toggler-icon::before {
+        display: block;
+        background-color: darkslategrey;
+        height: 3px;
+        content: "";
+        position: relative;
+        top: -7px;
+        transition: all 0.15s ease-out;/*taken down to hide quicker*/
+        transform-origin: center;
+      }
+
+      .navbar-toggler-icon::after {
+        display: block;
+        background-color: darkslategrey;
+        height: 3px;
+        content: "";
+        position: relative;
+        top: 4px;
+  }
+
+
+  .glow9 {
+    text-shadow: 0 0 2px gold, 0 0 5px gold,
+    0 0 5px gold, 0 0 10px gold;
+  }
+
+
+
+  .blink9 {
+    animation: blinker 6s linear infinite;
+    color: yellow;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+
+  }
+
+
+    .blink90 {
+      animation: blinker 6s linear infinite;
+      color: orange;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+
+
+
+
+    .google-map {
+      padding-bottom: 50%;
+      position: relative;
+ }
+
+ .google-map iframe {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+ }
+
+
+    </style>
+
+    <div class="" style="background-color: #123456">
+
+      <marquee  behavior="scroll" direction="left"><span style=" color: white; font-weight:bold; font-size:px; font-variant: small-caps; font-style: italic">  You Can Place an 🛒Order Anywhere Around Our Store</span></marquee>
+
+
+    <nav class="navbar navbar-dark" style="background-color:MediumSpringGreen	">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: #033E3E; font-weight: 900; font-family:serif" >RITEDISHES <img style="margin-right: 2px; margin-bottom: 10px;" height=25px src="https://i.postimg.cc/5tDcWch9/ritedishes-modified.png"></a>
+
+        <button  class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header justify-content-end">
+
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+            <img src="https://i.postimg.cc/5tDcWch9/ritedishes-modified.png" width="130" height="130" class=" z-depth-0 pol" alt="">
+            <h5 class="offcanvas-title blink90" id="offcanvasDarkNavbarLabel" style="color: orange; font-size: 200%; text-align: center; font-weight:900"> RITEDISHES</h5>
+
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">🏠 Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  📋 Menu
+                </a>
+                <ul class="dropdown-menu dropdown-menu" style="background-color: lightyellow">
+                  <li><a class="dropdown-item" href="{% url 'RiteCanteen:FoodContinental' %}" style="color: black; font-weight:900;">🥙Continental Dishes</a></li>
+                  <li><a class="dropdown-item" href="{% url 'RiteCanteen:FoodFruit' %}" style="color: black; font-weight:900;">🍇Fruits </a></li>
+                  <li><a class="dropdown-item" href="{% url 'RiteCanteen:FoodPastrils' %}" style="color: black; font-weight:900;">🍔Pastry</a></li>
+                  <li><a class="dropdown-item" href="{% url 'RiteDrink:FoodDrink' %}" style="color: black; font-weight:900;">🍺Drink</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="{% url 'StoreLocate' %}" style="color: black; font-weight:900;">🛍Store location</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://i.postimg.cc/VkBcbzwG/help.png" width="30" height="30" class="rounded-circle z-depth-0" alt="" > Help
+                </a>
+                <ul class="dropdown-menu dropdown-menu" style="background-color: lightyellow">
+                  <li><a class="dropdown-item" href="{% url 'About' %}" style="color: black; font-weight:900;"> <span style="font-size: 180%"><img src="https://i.postimg.cc/wBn3Thp8/team.png" width="35" height="35" class="rounded-circle z-depth-0" alt="" > About Us</span></a></li>
+                  <li><a class="dropdown-item" href="{% url 'contact' %}" style="color: black; font-weight:900;"><span style="font-size: 180%"><img src="https://i.postimg.cc/JhnnMpHz/telephone-call.png" width="35" height="35" class="rounded-circle z-depth-0" alt="" > Contact Us</span> </a></li>
+
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://i.postimg.cc/QCMKPjg0/profile-1.png" width="30" height="30" class="rounded-circle z-depth-0" alt="" > Account
+                </a>
+      <marquee class=" glow9"  behavior="scroll" direction="left"><span style=" color: black; font-weight:bold; font-size:30px; font-variant: small-caps; font-style: italic"> HI, {{user.username}} You Are Welcome To RiteDishes</span></marquee>
+
+                <ul class="dropdown-menu dropdown-menu" style="background-color: lightyellow">
+
+                  {% if user.is_superuser %}
+                  <li><a class="dropdown-item" href="{% url 'admin:index' %}" style="color: black; font-weight:900;"><span style="font-size: 180%"><img src="https://i.postimg.cc/QCMKPjg0/profile-1.png" width="35" height="35" class="rounded-circle z-depth-0" alt="" > Admin Setting</span> </a></li>
+                  {%endif%}
+                  {% if user.is_authenticated %}
+                  <li><a class="dropdown-item" href="{% url 'user_logout' %}" style="color: black; font-weight:900;"><span style="font-size: 180%"><img src="https://i.postimg.cc/QCMKPjg0/profile-1.png" width="35" height="35" class="rounded-circle z-depth-0" alt="" > Sign Out</span> </a></li>
+                  {% else %}
+                  <li><a class="dropdown-item" href="{% url 'user_login' %}" style="color: black; font-weight:900;"><span style="font-size: 180%"><img src="https://i.postimg.cc/QCMKPjg0/profile-1.png" width="35" height="35" class="rounded-circle z-depth-0" alt="" > Sign In</span> </a></li>
+                  <li><a class="dropdown-item" href="{% url 'register' %}" style="color: black; font-weight:900;"><span style="font-size: 180%"><img src="https://i.postimg.cc/QCMKPjg0/profile-1.png" width="35" height="35" class="rounded-circle z-depth-0" alt="" > Sign Up</span> </a></li>
+                  {% endif %}
+                </ul>
+              </li>
+            <form  method="GET" action="{% url "searchR" %}"class="d-flex mt-3" role="search">
+              <input class="form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner ">
+        <div class="carousel-item active">
+            <div class="food">
+              <img height=350px src="https://i.postimg.cc/Yq2vzLy3/serve.jpg" class="d-block w-100" alt="...">
+              <div class="note">
+                <h1 class="glow01">RITEDISHES</h1>
+                <p>We Serve The Right Dishes For You </p>
+              </div>
+            </div>
+          </div>
+        <div class="carousel-item">
+          <div class="food">
+          <img height=350px src="https://i.postimg.cc/ryj1TkBf/peopl-dey-eat.jpg" class="d-block w-100" alt="...">
+          <div class="note">
+            <h1 class="glow01">RITEDISHES</h1>
+            <p>Enjoy Our Tasty Meals 😋 </p>
+          </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div class="food">
+          <img height=350px src="https://i.postimg.cc/P5NwNnhc/mexican-food-catering-spread.png" class="d-block w-100" alt="...">
+          <div class="note">
+            <h1 class="glow01">Continental/ Inter-Continental Dishes</h1>
+            <p>Enjoy Our World Class Continental/ Inter-Continental Dishesr</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="food">
+        <img height=350px src="https://i.postimg.cc/j2J0TX8T/chef.jpg" class="d-block w-100" alt="...">
+        <div class="note">
+          <h1 class="glow01">RITEDISHES CHEF</h1>
+          <p>Meet Our World Class CHEF</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="carousel-item">
+          <div class="food">
+          <img height=350px src="https://i.postimg.cc/02c6vhnj/food-delivery-service-design-vector.jpg" class="d-block w-100" alt="...">
+          <div class="note">
+            <h1 class="glow01">RITEDISHES</h1>
+            <p>Enjoy Free Delivery Of Any Food You Order From Us</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="food">
+          <img height=350px src="https://i.postimg.cc/SNQ3SZKT/open.jpg" class="d-block w-100" alt="...">
+          <div class="note">
+            <h1 class="glow01">RITEDISHES</h1>
+            <p>We Are Always Open TO Serve You</p>
+        </div>
+      </div>
+    </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div style="background-color: orange">
+  <h1 style="background-color: orange; color:black; font-family: Georgia; text-align:center; font-weight:900">FAST MENU <img style="margin-right: 2px; margin-bottom: 7px;" height=34px src="https://i.postimg.cc/TP7hXP08/ham-modified.png"></h1>
+  
+
+{% block content %}
+<h1></h1>
+{% endblock%}
+<div>
+  <img src="https://i.postimg.cc/WzfvTxyb/open.gif" alt="Lights" style="width:100%">
+
+  <br>
+</div>
+<div style="background-color: orange">
+<h1 style=" text-align:center;font-weight:900; font-family: Georgia; font-size: 45px"> MENU </h1>
+
+<div class="container-fluid" style="background-color: teal">
+<br>
+<div class="card text-center">
+  <div class=" cup">
+    <img src="https://i.postimg.cc/W4Dss762/inter2.jpg" width="100%" class="img-fluid" alt="...">
+    <a href="{% url 'RiteCanteen:FoodContinental' %}"><button type="button" class="btn btn-warning blink29 " ><span style="color: midnightblue; font-size: 20px; font-weight:900">View</span></button></a>
+
+  </div>
+  <div class="card-body">
+    <h6 class="card-title glow98" style="color: midnightblue; font-weight:900; text-align: left;  font-size: 19px">CONTINENTAL AND INTER-CONTINENTAL DISHES</h6>
+          <p class="card-text" style="text-align: justify;">RITEDISHES will provide you with the best Continental and Inter-Continental Dishes. Click and check out all our Continental and Inter-Continental Dishes.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<br>
+
+<div class="card text-center">
+  <div class=" cup">
+    <img src="https://i.postimg.cc/6Qz9M0SP/fruitgif.gif" width="100%" class="img-fluid " alt="...">
+    <a href="{% url 'RiteCanteen:FoodFruit' %}"><button type="button" class="btn btn-warning blink29 " ><span style="color: midnightblue; font-size: 20px; font-weight:900">View</span></button></a>
+
+  </div>
+  <div class="card-body">
+    <h6 class="card-title glow98" style="color: midnightblue; font-weight:900; text-align: justify;  font-size: 19px">FRUIT</h6>
+          <p class="card-text" style="text-align: justify;">RITEDISHES will provide you with the best all the Fruits ever. Click and check out all fruits..</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<br>
+
+
+<div class="card text-center">
+  <div class=" cup">
+    <img src="https://i.postimg.cc/FRHtbY4n/pastry.png" width="100%" class="img-fluid " alt="...">
+    <a href="{% url 'RiteCanteen:FoodPastrils' %}"><button type="button" class="btn btn-warning blink29 " ><span style="color: midnightblue; font-size: 20px; font-weight:900">View</span></button></a>
+
+  </div>
+  <div class="card-body">
+    <h6 class="card-title glow98" style="color: midnightblue; font-weight:900; text-align: justify;  font-size: 19px">PASTRY</h6>
+          <p class="card-text" style="text-align: justify;">RITEDISHES will provide you with the best Tasty Pastries. Click and check out all our Tasty Pestries..</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<br>
+
+<div class="card text-center">
+  <div class=" cup">
+    <img src="https://i.postimg.cc/0NXNgRcj/drinksoft.jpg" width="100%" class="img-fluid " alt="...">
+    <a href="{% url 'RiteDrink:FoodDrink' %}"><button type="button" class="btn btn-warning blink29 " ><span style="color: midnightblue; font-size: 20px; font-weight:900">View</span></button></a>
+
+  </div>
+  <div class="card-body">
+    <h6 class="card-title glow98" style="color: midnightblue; font-weight:900; text-align: justify;  font-size: 19px">DRINKS</h6>
+          <p class="card-text" style="text-align: justify;">RITEDISHES will provide you with the best Non Alcoholic ans Alcholic Drinks. Click and check out all our Non Alcoholic ans Alcholic Drinks.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+<br>
+
+
+
+</div>
+
+<div style="background-color: orange">
+  <h1 style=" text-align:center;font-weight:900;   font-size: 30px">SERVICE RENDERING</h1>
+
+
+  <div class="container-fluid" style="background-color: teal">
+    <br>
+<div class="card text-center">
+  <div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray ">
+        EVENT PLANNING
+      </div>
+      <a href="{% url 'EventPlan' %}"><img src="https://i.postimg.cc/rs7XFsC6/event-image.jpg" alt="Lights" style="width:100%"></a>
+
+    </div>
+    <br>
+  </div>
+
+  <div class="container-fluid " style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray">
+      WEDDING CEREMONY
+    </div>
+    <a href="{% url 'EventWed' %}"><img src="https://i.postimg.cc/1t1CNSTY/wed.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color:DarkSlateGray">
+      BIRTHDAY CEREMONY
+    </div>
+    <a href="{% url 'EventBirth' %}"><img src="https://i.postimg.cc/RFv1BZ29/birthday-parties.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br></div>
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray">
+      NAMING CEREMONY
+    </div>
+    <a href="{% url 'EventName' %}"><img src="https://i.postimg.cc/xTFXR3QL/naming.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray">
+      ANNIVERSARY CELEBRATION
+    </div>
+    <a href="{% url 'EventAnn' %}"><img src="https://i.postimg.cc/6qbX2mqL/ANN.png" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray">
+      <marquee class=" glow989" behavior="scroll" direction="left"><span style=" color: Black; font-weight:bold;  font-variant: small-caps; font-style: italic"> Tap In And Get Guidelines For The Best Diet For You.</span></marquee>
+
+    </div>
+    <a href="{% url 'EventDiet' %}"><img src="https://i.postimg.cc/BQbGryB6/dieting.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray">
+      HOTEL MANAGEMENT
+    </div>
+    <a href="{% url 'EventHot' %}"><img src="https://i.postimg.cc/nrdr41jC/hotel-management-systems.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: DarkSlateGray">
+    CAFETERIA MANAGEMENT
+    </div>
+    <a href="{% url 'EventCaf' %}"><img src="https://i.postimg.cc/3JnpTp8K/cafeteria.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: darkslategrey">
+      RENDERING OF WAITER/WAITRESS
+    </div>
+    <a href="{% url 'EventRender' %}"><img src="https://i.postimg.cc/3NmZLqJ5/655waiter.jpg" alt="Lights" style="width:100%"></a>
+
+  </div>
+  <br>
+</div>
+</div>
+
+
+
+<!-- Footer -->
+<style>
+  body {
+    font-family: Arial, Helvetica, san-serif;
+    font-size: 20px;
+}
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+
+}
+.button5 {border-radius: 50%;}
+
+</style>
+
+<button type="button" class="btn btn-danger btn-floating btn-lg button5" id="btn-back-to-top">
+  ↑
+</button>
+
+<script>
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+{% comment %}
+ <div style="background-color: teal">
+  <div  style="background-color: white">
+  <br>
+  <h3 style="text-align: center; color: orange; font-weight:900">EVENTS</h3>
+  <h3 style="text-align: center; color: orange; font-weight:900; font-family: cursive">SHARE YOUR MOMENTS IN OUR RESTAURANT</h3>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img  width=200px, height=400px src="https://i.postimg.cc/8kyvq3mJ/chef1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> ROSE GABRIEL </span></h5>
+                <p style="color:grey; text-align:center"> Pastry Chef</p>
+              <h2  style="color: darkslategrey; text-align:center; "> Meet Chef Rose Gabriel, Who is responsible in
+                my our Pastries.
+              </h2>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+    </div>
+    <br>
+
+     {% endcomment %}
+
+  </div>
+  
+  <div  style="background-color: white">
+    <br>
+     <h3 style="text-align: center; background-color: white;  color: ORANGE; font-weight:900">RiteDishes</h3>
+     <h3 style="text-align: center; color: Black; background-color: white;font-weight:900; font-family: cursive">SHARE YOUR MOMENTS IN OUR RESTAURANT</h3>
+
+     <div class="container-fluid" style="background-color: grey">
+      <br>
+    <div class="card text-center">
+        <a href="{% url 'RitePhoto' %}"><img src="https://i.postimg.cc/yYdRKLqF/cafe2.jpg" alt="Lights" style="width:100%"></a>
+        {% comment %} <img  width=200px, height=400px src="https://i.postimg.cc/8kyvq3mJ/chef1.jpg" class="card-img-top" alt="..."> {% endcomment %}
+        <div class="card-body">
+          <div class=" glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: darkmagenta">
+            CHECK OUR GALLERY
+          </div>
+          
+          {% comment %} <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> ROSE GABRIEL </span></h5> {% endcomment %}
+          {% comment %} <h5  style="color: darkslategrey; text-align:center; "> View All Our Different 
+          </h5> {% endcomment %}
+
+        </div>
+
+      </div>
+      <br>
+    
+      <br>
+    </div>
+  </div>
+
+  <div  style="background-color: white">
+    <br>
+  
+    <h3 style="text-align: center; background-color: white;  color: ORANGE; font-weight:900">CONTACT</h3>
+    <h3 style="text-align: center; color: Black; background-color: white;font-weight:900; font-family: cursive">NEED HELP? <span style="color:red; font-family: cursive">CONTACT US </span></h3>
+
+    <div class="container-fluid" style="background-color: darkslategrey">
+     <br>
+
+
+
+    <div class="google-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.6147461551914!2d6.344341314424168!3d7.272154316025368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10467734127d8db7%3A0xa81a217f046cd312!2sRitedishes!5e1!3m2!1sen!2sng!4v1680576338357!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ <br>
+ <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="  color: darkslategrey; font-weight:900"><img src="https://i.postimg.cc/VNLZ8k7y/address.png" width="40" height="40" class="rounded-circle z-depth-0" alt=""> Our Address</h5>
+        <p class="card-text">82B Ogiriga New Site Okugbe Road Okpella,</span> <span style="color: firebrick; font-weight:bold">Edo State</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="  color: darkslategrey; font-weight:900"><img src="https://i.postimg.cc/pdzM1ZLG/email2.png" width="40" height="40" class="rounded-circle z-depth-0" alt=""> Email Us</h5>
+        <p class="card-text">ritedishesn@gmail.com </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="  color: darkslategrey; font-weight:900"><img src="https://i.postimg.cc/8Cc5rLyZ/call.jpg" width="40" height="40" class="rounded-circle z-depth-0" alt=""> Call Us</h5>
+        <p class="card-text">08137120024</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title" style="  color: darkslategrey; font-weight:900"><img src="https://i.postimg.cc/T3GRMFZ8/open.png" width="40" height="40" class="rounded-circle z-depth-0" alt=""> Opening Hours</h5>
+        <p class="card-text"><span style="color:black; font-weight: 900"> Mon-Sat:</span> 7AM - 12PM; <span style="color: firebrick; font-weight:bold"> Sunday:</span> 9AM - 12PM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white " style="background-color: midnightblue">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block ">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=100089560156822&mibextid=ZbWKwL" class="me-4 link-secondary">
+        <img src="https://i.postimg.cc/rFcCqbpM/facebook.png" class="rounded-circle z-depth-0" alt="no image found"  height="40">
+      </a>
+       <a href="https://instagram.com/ritedishes?igshid=OTJhZDVkZWE=" class="me-4 link-secondary">
+        <img src="https://i.postimg.cc/xT1CnyLc/instagram-5.png" class="rounded-circle z-depth-0" alt="no image found"  height="40">
+      </a>
+      <a href="https://wa.me/message/UFD262DNNSMCI1" class="me-4 link-secondary">
+        <img src="https://i.postimg.cc/3xCCcvfn/pngimg-com-whatsapp-PNG95171.png" class="rounded-circle z-depth-0" alt="no image found"  height="40">
+      </a>
+     </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+      <img src="https://i.postimg.cc/bvdxJpy2/Whats-App-Image-2023-02-26-at-2-38-26-PM.jpg" width="40" height="40" class="rounded-circle z-depth-0" alt=""> <span style="color: blue; font-family:serif; font-weight:900;" class="glow9 blink9";>RITEDISHES</span></a>
+
+          </h6>
+          <p style="font-size:17px">
+            RITEDISHES is Nigeria'a pioneer QSR brand, renowned for its delicious meals and freshly baked pastries.
+            we have grown over the years, constantly re-inventing our products and services, to match the ever-evolving needs of our customers.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 glow9">
+            Products
+          </h6>
+          <p>
+            <a href="{% url 'EventPlan' %}" class="text-reset">Event Planning</a>
+          </p>
+          <p>
+            <a href="{% url 'EventWed' %}" class="text-reset">Wedding Ceremony</a>
+          </p>
+          <p>
+            <a href="{% url 'EventBirth' %}" class="text-reset">Birthday Ceremony</a>
+          </p>
+          <p>
+            <a href="{% url 'EventCaf' %}" class="text-reset">Cafeteria Management</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 glow9">
+            PRODUCTS
+          </h6>
+          <p>
+            <a href="{% url 'EventName' %}" class="text-reset">Naming Ceremony</a>
+          </p>
+          <p>
+            <a href="{% url 'EventAnn' %}" class="text-reset">Anniversary Celebration</a>
+          </p>
+          <p>
+            <a href="{% url 'EventDiet' %}" class="text-reset">Dieting</a>
+          </p>
+          <p>
+            <a href="{% url 'EventHot' %}" class="text-reset">Hotel Management</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 glow9">Contact</h6>
+          <p>🏠 82B, Ogiriga New Site Okugbe Road Okpella, Edo State</p>
+          <p>📩 RiteDishes@gmail.com
+          </p>
+          <p>📞 08137120024</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 text-white" style="background-color: purple;">
+    © 2023 Copyright: <span style="color: blue; font-family:serif; font-weight:900;" class="glow9 blink9";>RITEDISHES</span></a>
+      <a class="text-reset fw-bold " href=""></a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

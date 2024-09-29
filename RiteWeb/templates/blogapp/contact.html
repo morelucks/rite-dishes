@@ -1,0 +1,41 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} Contact Us {% endblock %}
+
+{% block content %}
+
+<div  style="background-color:teal">
+  <br>
+  
+<section >
+  <div class="container">
+    <br>
+
+
+    <div class="card mb-3">
+      <img src="https://i.postimg.cc/13d2n7hP/cona.jpg" class="card-img-top" alt="...">
+      <div class="card-body" style="background-color: thistle">
+
+        <div class="row justify content center">
+          <div class="col-md-12">
+            <span class="row d-flex justify-content-center mb-4"><form method="post"></span>
+                <div class="form-group">
+                  {% csrf_token %}
+                  {{form|crispy}}
+                  <span class="row d-flex justify-content-center mb-4"><input type="submit" value="Submit Response" class="btn btn-success font-weight-bold " style=" width: 93%; padding: 10px 32px; "></span>
+                </div>
+              </form>
+          </div>
+          </div>
+        </div>
+
+
+
+         </div>
+    </div>
+   
+   
+  
+            
+{% endblock %}

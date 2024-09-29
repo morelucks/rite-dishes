@@ -1,0 +1,528 @@
+{% extends 'home.html' %}
+  <!-- Page Content -->
+  {% load static %}
+  {% block content %}
+<style>
+
+  .food {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .food img {vertical-align: middle;}
+
+  .food .note {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 15px;
+  }
+
+        .button {
+          background-color: #1c87c9;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          border: none;
+          color: black;
+          cursor: pointer;
+          display: inline-block;
+          font-family: sans-serif;
+          font-size: 20px;
+          padding: 10px 15px;
+          text-align: center;
+          text-decoration: none;
+        }
+        @keyframes glowing {
+          0% {
+            background-color: #FFAE42;
+            box-shadow: 0 0 5px #004225;
+          }
+          50% {
+            background-color: #FFAE42;
+            box-shadow: 0 0 20px #004225;
+          }
+          100% {
+            background-color: #FFAE42	;
+            box-shadow: 0 0 5px #033E3E;
+          }
+        }
+        .button {
+          animation: glowing 1300ms infinite;
+        }
+
+
+      
+        .button9 {
+          background-color: #12AD2B;
+          border: none;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+        }
+        
+        
+
+        
+      
+
+
+
+{% comment %} 
+        .btn1 {
+          margin-right: 160px;
+          
+        } {% endcomment %}
+
+
+
+
+
+
+
+  .cup .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .blink29 {
+    animation: blinker 6s linear infinite;
+    color: black;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+
+  }
+
+
+
+  .blink69 {
+    animation: blinker 6s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+
+  }
+
+
+
+  .glow68 {
+    text-shadow: 0 0 5px gold, 0 0 10px gold,
+    0 0 20px gold, 0 0 40px gold;
+  }
+
+
+
+  .glow20 {
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow,
+    0 0 20px yellow, 0 0 40px yellow;
+  }
+
+  .glow21 {
+    text-shadow: 0 0 5px darkslategrey, 0 0 10px darkslategrey,
+    0 0 20px darkslategrey, 0 0 40px darkslategrey;
+  }
+
+
+  .glow287 {
+    text-shadow: 0 0 2px #033E3E, 0 0 5px #033E3E,
+    0 0 5px #033E3E, 0 0 10px #033E3E;
+  }
+
+
+  .glow212 {
+    text-shadow: 0 0 5px #5F9EA0, 0 0 10px #5F9EA0,
+    0 0 20px #5F9EA0, 0 0 40px #5F9EA0;
+  } 
+
+  .glow29 {
+    text-shadow: 0 0 5px #004225, 0 0 10px #004225,
+    0 0 20px #004225, 0 0 40px #004225;
+  }
+
+
+
+  .clip {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .shirt {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .text-war {
+    position: absolute;
+    top: 80px;
+    left: 10px; 
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgb(255,255,255); /* Black background with 0.5 opacity */
+    color: black;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
+
+
+
+
+
+
+
+  </style>
+
+  <div class="footer-copyright text-center " style="background-color:DarkSlateGray">
+      <!-- Post Content Column -->
+      <br>
+      
+      <div class="container">
+
+        <div class="card text-center">
+          <div class="card-header">
+            <marquee><span style="color: maroon; font-weight:bold; font-variant: small-caps; font-style: italic">Order Your {{post.title}} Now And We will deliver it to your door</span></marquee>
+
+          </div>
+      <div class="clip">
+        <img  src="{{post.image.url}}" class="border border-5 border-color: coral" alt="" style="border-style: solid;"   height="100%" width="100%">
+        <div class="text-block glow01">
+          <h4></h4>
+          <h4 style="font-weight:900">{{post.title}}</h4>
+        </div>
+      </div>
+{% comment %} 
+<br><br>
+            <p class="card-text" style=" text-align: left"><span style=" text-align: left; color: midnightblue; font-weight:900;">PRICE:</span> {{post.body}} </p>
+            <h4 class="card-text" style=" text-align: left; color: MAROON; font-weight:900;">DESCRIPTION</h4>
+            <p style=" text-align: left"> {{post.body2}} </p>
+            <p style=" text-align: left"> {{post.body3}} </p>
+            <p style=" text-align: left">  {{post.body4}}</p>
+            <p style=" text-align: left"> {{post.body5}} </p>
+            <p style=" text-align: left"> {{post.body6}} </p>
+            <p style=" text-align: left"> {{post.body7}}</p>
+            <p style=" text-align: left"> {{post.body8}}</p> {% endcomment %}
+
+            <!-- Default dropright button -->
+<!-- Example single danger button -->
+{% comment %} <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-fullscreen"> {% endcomment %}
+<div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1"  style="background: #25d366 url('https://i.postimg.cc/Gp6ZPF2q/gal4.jpg') no-repeat  center;   background-size: cover; ">
+  <div class="modal-dialog " >
+    <div class="modal-content " >
+      <div class="modal-header" style="background-color: #033E3E; border-color:  #033E3E">
+        {% comment %} <span class=" glow21" id="exampleModalToggleLabel"  style=" font-family:sans-serif; font-weight:900;  color:white;"><img width="50" height="50" src='https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png' border='0' alt='imageonline-co-emojiadded'/> RITEDISHES <br>ONLINE   <img width="21" height="21" src="https://img.icons8.com/glyph-neue/64/40C057/approval.png" alt="approval"/></span>  {% endcomment %}
+      <img src="https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png" width="50" height="50" style="   margin-right: 15px; margin-bottom: 13px;"  alt="" align="left"> 
+      <h5 style="text-align: left; color: white; font-weight: 900" >RITEDISHES <img width="21" height="21" style="margin-bottom: 5px" src="https://img.icons8.com/glyph-neue/64/40C057/approval.png" alt="approval"/> <BR><span style="font-size: 20px;  font-weight: normal;font-family: Courier New">Online</span></h5>
+{% comment %}         
+        <img width="50" height="50" src='https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png' border='0' alt='imageonline-co-emojiadded'/>
+       <br> <h6 style="color: white; text-align: center">RITEDISHES<br><span style="font-size: 20px; color: white"> Online</span></h6> {% endcomment %}
+        
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"  aria-label="Close"></button>
+      </div>
+      <div class="shirt">
+      <img src="https://i.postimg.cc/02JhmrbG/peakpx-2.jpg" alt="Lights" width="100%" height="400px">
+        <div class="text-war">
+          <h4></h4>
+          <h6 style="text-align: left; font-family: serif; color: #1F6357	">Ritedishes🍛</h6>
+          <h4 style="text-align: left; font-family: Georgia">Hi there 👋🏼</h4>
+          <h6 style="text-align: left; font-family: Lucida Sans Unicode">Click on start chat to place your</h6> 
+          <h6 style="text-align: left; font-family: Lucida Sans Unicode"> order</h6>
+        </div>
+      </div>
+      <div style="background-color: #FFFAFA	">
+     <a href="https://wa.me/message/UFD262DNNSMCI1" style="text-decoration: none"> <button  type="button" class="btn" style="display: table; font-family: sans-serif; text-decoration: none; margin: 0.6em auto; color: white; font-size: 17px; padding: 10px 80px; border-radius: 2em; font-weight: bold; background-color: #25d366"> <img style="margin-right: 2px; margin-bottom: 5px;" height=25px src="https://tochat.be/click-to-chat-directory/css/whatsapp.svg"><span style="color: black"> Start Chat</span></button></a>
+
+      </div>
+
+      <div class="modal-footer" style="background-color: #2E1A47	">
+        <span  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" ><image height="50px" src="https://i.postimg.cc/T3grHwLg/csllnow-modified.png"></span>
+        {% comment %} <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" ><h4 style=" font-weight: 900"> <img style="margin-right: 2px; margin-bottom: 5px;" height="25" src="https://i.postimg.cc/yNRCdFfq/telephone.png"> Call Us</h4></button> {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" style="background: #25d366 url('https://i.postimg.cc/Gp6ZPF2q/gal4.jpg') no-repeat  center;   background-size: cover; "> 
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #000080; border-color:  #000080">
+      <img src="https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png" width="50" height="50" style="   margin-right: 15px; margin-bottom: 13px;" 4 alt="" align="left"> 
+      <h5 style="text-align: left; color: white; font-weight: 900" >RITEDISHES<img width="21" height="21" style="margin-bottom: 5px" src="https://img.icons8.com/glyph-neue/64/40C057/approval.png" alt="approval"/> <BR><span style="font-size: 20px;  font-weight: normal;font-family: Courier New">Online</span></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"  aria-label="Close"></button>
+
+      </div>
+      <div class="shirt">
+      <img src="https://i.postimg.cc/02JhmrbG/peakpx-2.jpg" alt="Lights" width="100%" height="400px">
+        <div class="text-war">
+          <h4></h4>
+          <h6 style="text-align: left; font-family: serif; color: #1F6357	">Ritedishes🍛</h6>
+          <h4 style="text-align: left; font-family: Georgia">Hi there 👋🏼</h4>
+          <h6 style="text-align: left; font-family: Lucida Sans Unicode">Click on contact us to place your</h6> 
+          <h6 style="text-align: left; font-family: Lucida Sans Unicode"> order</h6>
+        </div>
+        <div style="background-color: #FFFAFA	">
+         <a href="tel:08103652434" style="text-decoration: none"> <button  type="button" class="btn" style="display: table; font-family: sans-serif; text-decoration: none; margin: 0.6em auto; color: white;  font-size: 17px; padding: 10px 80px; border-radius: 2em; font-weight: bold; background-color: #000080	"> <img style="margin-right: 2px; margin-bottom: 5px" height=25px src="https://i.postimg.cc/Gp2KHRgf/telephone-call.png"><span style="color: white; font-size: 15px"> Contact Us!</span></button></a>
+    
+          </div>
+        </div>
+
+      <div class="modal-footer" style="background-color: #2E1A47	">
+     <a style="text-decoration: none"> <button data-bs-target="#exampleModalToggle" data-bs-toggle="modal"  type="button" class="btn" style="display: table; font-family: sans-serif; text-decoration: none; margin: 0em auto; color: white; font-size: 20px; padding: 8px 15px; border-radius: 2em; font-weight: bold; background-color: #25d366"> <img style="margin-right: 2px; margin-bottom: 5px;" height=25px src="https://tochat.be/click-to-chat-directory/css/whatsapp.svg"><span style="color: black"> Chat Us</span></button></a>
+
+        {% comment %} <button style="border-radius: 10px" class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><h3 style="font-size: 25px; font-weight: 900"><img height=25px src="https://tochat.be/click-to-chat-directory/css/whatsapp.svg"> Chat Us</h3> </button> {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <br>
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <a type="submit" class="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" style="font-weight: bold; ">ORDER NOW</a>
+    {% comment %} <a class=" button9" data-bs-toggle="modal"  href="#exampleModalToggle" role="button" style="color:white; font-size: 15px">ORDER NOW</a> {% endcomment %}
+
+
+
+<!-- Modal -->
+
+    
+  </div>
+<br>
+</div>
+          </div>
+          {% comment %} <div class="card-footer text-muted"><span style="color: indigo; font-weight:900">Last Updated:</span>
+            <span style="color: green">{{post.created_on}}</span>
+          </div> {% endcomment %}
+
+
+        <hr>
+        <div class="card" style="width: 100%;">
+          <div class="card-header">
+        <p class="glow212" style="font-weight:900; color: #033E3E; font-size: 25px; text-align: left">DESCRIPTION</p> 
+            
+          </div>
+<ul class="list-group list-group-flush">
+        <li class="list-group-item"><h5 style="text-align: left; font-family: sans-serif;">
+          {{post.body2}}<br>
+          {{post.body3}}<br>
+          {{post.body4}}<br>
+          {{post.body5}}<br>
+          {{post.body6}}<br>
+          {{post.body7}}<br>
+          {{post.body8}}<br>
+
+        
+        </h5></li>
+       
+</ul>
+        </div>
+        <hr>
+
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: MidNightBlue">Leave a Comment:</h5>
+          <div class="card-body" style="background-color: darkslateblue">
+            <form method="POST">
+              {% csrf_token %}
+              {{form.Commenter}}<br>
+              {{form.body}}<br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Single Comment -->
+        {% for comment in comments %}
+        <div class="media mb-4" style="background-color: white">
+
+          <div class="media-body">
+            <h2 class="mt-0" style="text-align: left; font-family:sans-serif; font-weight:900; color: Green"><img style="border-radius: 45%"  height=30px src="https://i.postimg.cc/CKqz2MSY/profile.png"  alt="You Dont Have Data"> {{comment.Commenter}}</h2>
+          <h5 style="text-align: left; font-style: italic; color: navy">🎙{{comment.body}}</h5>
+          </div>
+        </div>
+        {% endfor %}
+{% comment %}
+
+      <div class="card text-center">
+    <div class="card-header glow68" style=" font-size: 25px;  background-color: aquamarine; font-family:sans-serif; font-weight:900; color: Green">
+          EAT WELL, LIVE WELL
+        </div>
+    <img src="https://i.postimg.cc/mrC1hW7D/image-processing20210820-24739-1jdhob9.gif" alt="Lights" style="width:100%">
+
+      </div>
+    </div> {% endcomment %}
+
+
+
+    <div class="card text-bg-dark">
+      <img src="https://i.postimg.cc/mrC1hW7D/image-processing20210820-24739-1jdhob9.gif" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title glow68" style=" font-size: 25px;   font-family:sans-serif; font-weight:900; text-align: right; color: black"></h5>
+      </div>
+    </div>
+
+    <br>
+
+    <h1 style="color:white">You might also like:</h1>
+    <br><br>
+<div class="container" >
+<div class="container" style="background-color: white">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+                <img height=250 src="https://i.postimg.cc/ryj1TkBf/peopl-dey-eat.jpg" class="card-img-top" alt="...">
+                <a href="{% url 'coke' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900; ">FAST MENU</h5>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+
+                <img height=250 src="https://i.postimg.cc/rs7XFsC6/event-image.jpg" class="card-img-top" alt="...">
+                <a href="{% url 'EventPlan' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Event Planning</h5>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/1t1CNSTY/wed.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventWed' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Wedding Ceremony</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/RFv1BZ29/birthday-parties.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventBirth' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Birthday Ceremony</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/xTFXR3QL/naming.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventName' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Naming Ceremony</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/6qbX2mqL/ANN.png" class="card-img-top" alt="...">
+              <a href="{% url 'EventAnn' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Anniversary Celebration</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/BQbGryB6/dieting.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventDiet' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Suitable Diet For You</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/nrdr41jC/hotel-management-systems.jpgs" class="card-img-top" alt="...">
+              <a href="{% url 'EventHot' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Hotel Management</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="background-color: darkslategrey">
+              <div class="cup">
+              <img height=250 src="https://i.postimg.cc/3JnpTp8K/cafeteria.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventCaf' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Cafeteria Management</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card"style="background-color: darkslategrey" >
+               <div class="cup">
+                <img height=250 src="https://i.postimg.cc/3NmZLqJ5/655waiter.jpg" class="card-img-top" alt="...">
+                <a href="{% url 'EventRender' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900"> Meet Our Waiter/Waitress</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+        <br>
+  </div>
+{% endblock %}
+

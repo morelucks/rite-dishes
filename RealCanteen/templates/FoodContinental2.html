@@ -1,0 +1,269 @@
+{% extends 'continental2.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+
+{% block content %}
+<!-- section 1 for standards-->
+
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700);
+ 
+       html {
+         font-family: "Open Sans", sans-serif;
+       }
+ {% comment %}       
+       h1 {
+         color: #444;
+       } {% endcomment %}
+ 
+ 
+ 
+ 
+       .cup .btn {
+         position: absolute;
+         top: 40%;
+         border-radius: 15px;
+ 
+         left: 48%;
+         transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         font-size: 16px;
+         padding: 12px 24px;
+         cursor: pointer;
+         text-align: center;
+       }
+ 
+ 
+       body {
+         font-family: Arial;
+         font-size: 17px;
+       }
+       
+       .food {
+         position: relative;
+         max-width: 100%;
+         margin: 0 auto;
+       }
+       
+       .food img {vertical-align: middle;}
+       
+       .food .note {
+         position: absolute;
+         bottom: 0;
+         background: rgb(0, 0, 0); /* Fallback color */
+         background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+         color: #f1f1f1;
+         width: 100%;
+         padding: 20px;
+       }
+ 
+ 
+ 
+       .blink29 {
+         animation: blinker 6s linear infinite;
+         color: black;
+       }
+       @keyframes blinker {
+         50% {
+           opacity: 0;
+         }
+         
+       }
+ 
+ 
+ 
+       .glow98 {
+         text-shadow: 0 0 5px gold, 0 0 10px gold,
+         0 0 20px gold, 0 0 40px gold;
+       }
+ 
+ 
+ 
+       .glow01 {
+         text-shadow: 0 0 5px darkGreen	, 0 0 10px darkGreen	,
+         0 0 20px darkgreen	, 0 0 40px darkGreen	;
+       }
+ 
+       .navbar-toggler-icon {
+         background-image: none!important;
+         background-color: darkslategrey;
+         height: 3px;
+         width: 25px;
+         margin: 10px 0;
+         position: relative;
+         transition: all 0.35s ease-out;
+         transform-origin: center;
+       }
+       .navbar-toggler-icon::before {
+         display: block;
+         background-color: darkslategrey;
+         height: 3px;
+         content: "";
+         position: relative;
+         top: -7px;
+         transition: all 0.15s ease-out;/*taken down to hide quicker*/
+         transform-origin: center;
+       }
+ 
+       .navbar-toggler-icon::after {
+         display: block;
+         background-color: darkslategrey;
+         height: 3px;
+         content: "";
+         position: relative;
+         top: 4px;
+   }
+ 
+ 
+   .glow9 {
+     text-shadow: 0 0 5px gold, 0 0 10px gold,
+     0 0 20px gold, 0 0 40px gold;
+   }
+    
+   .glow68 {
+     text-shadow: 0 0 5px white, 0 0 10px white,
+     0 0 20px white, 0 0 40px white;
+   }  
+   
+   
+   .glow98 {
+    text-shadow: 0 0 5px orange, 0 0 10px orange,
+    0 0 20px orange, 0 0 40px orange;
+  }
+ 
+   .glow977 {
+     text-shadow: 0 0 5px white, 0 0 10px white,
+     0 0 20px white, 0 0 40px white;
+   }
+ 
+   .blink9 {
+     animation: blinker 6s linear infinite;
+     color: yellow;
+   }
+   @keyframes blinker {
+     50% {
+       opacity: 0;
+     }
+ 
+   } 
+   
+   
+     .blink90 {
+       animation: blinker 6s linear infinite;
+       color: orange;
+     }
+     @keyframes blinker {
+       50% {
+         opacity: 0;
+       }  
+     }
+ 
+ 
+ 
+  .blink900 {
+       animation: blinker 2s linear infinite;
+     }
+     @keyframes blinker {
+       50% {
+         opacity: 0;
+       }  
+     }
+ 
+ 
+    .blink908 {
+       animation: blinker 3s linear infinite;
+     }
+     @keyframes blinker {
+       50% {
+         opacity: 0;
+       }  
+     }
+ 
+   </style>
+
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+          <div class="food">
+            <img height=350px src="https://i.postimg.cc/L51mDMj9/serve33.jpg" class="d-block w-100" alt="...">
+            <div class="note">
+              <h1 style="text-align: left" class="glow01">RITEDISHES</h1>
+              <p style="text-align: left">We Offer The Best Meal You Can Ever Think Of</p>
+            </div>
+          </div>
+        </div>
+      <div class="carousel-item">
+        <div class="food">
+        <img height=350px src="https://i.postimg.cc/q72MVKRs/serve21.jpg" class="d-block w-100" alt="...">
+        <div class="note">
+          <h1 style="text-align: left" class="glow01">RITEDISHES</h1>
+          <p style="text-align: left" >Enjoy Our Tasty Meal 😋 </p>
+        </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="food">
+        <img height=350px src="https://i.postimg.cc/6qMTtYfZ/inter.jpg" class="d-block w-100" alt="...">
+        <div class="note">
+          <h1 style="text-align: left"class="glow01">RITEDISHES</h1>
+          <p style="text-align: left">Enjoy Our Tasty Meal 😋 </p>
+        </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="food">
+        <img height=350px src="https://i.postimg.cc/Yq1zDnN8/delboy.gif" class="d-block w-100" alt="...">
+        <div class="note">
+          <h1 style="text-align: left" class="glow01">RITEDISHES</h1>
+          <p style="text-align: left">Enjoy Free Delivery Of Any Food You Order From Us</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+  </div>
+  <br>
+</div>
+
+
+<section id="best-features" class="text-center">
+
+  <div style="background-color: orange">
+    <h3 class="glow68" style="background-color: orange;font-weight:900; text-align:center; font-size: 28px">Inter-Continental Dishes</h3>
+    <br>
+  </div>
+    
+
+</section>
+<div class="container-fluid" style="background-color: teal">
+    
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+{% for rite2 in rites %}
+    <div class="col">
+      <div class="card">
+        <a href="{% url 'RealCanteen:food2_detail' rite2.slug %}"><img  width=200px, height=400px src="{{rite2.image.url}}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title" style="color: indigo; font-weight:900">{{rite2.title}} <span style="color: #3A3B3C">- ₦{{rite2.body}}</span></h5>   
+            <small class="text-muted">🕗 3 mins ago </small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <br>
+</div>
+{%endblock%}
+
